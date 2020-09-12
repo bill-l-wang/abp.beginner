@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\domain\Marketing.Domain\Marketing.Domain.csproj" />
+    <ProjectReference Include="..\Marketing.Application.Contracts\Marketing.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
