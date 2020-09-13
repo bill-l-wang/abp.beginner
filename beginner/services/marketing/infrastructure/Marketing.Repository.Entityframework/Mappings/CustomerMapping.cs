@@ -5,7 +5,7 @@ using System;
 using Volo.Abp;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace Marketing.Repository.Entityframework.Mappings
+namespace Marketing.Repository.EntityFramework.Mappings
 {
     public static class CustomerMapping
     {
@@ -27,7 +27,7 @@ namespace Marketing.Repository.Entityframework.Mappings
                     v => v.ToString(),
                     v => (Gender)Enum.Parse(typeof(Gender), v));
 
-                b.HasMany(x => x.Labels).WithOne().HasForeignKey(x => x.CustomerId);
+                b.HasMany(x => x.Labels).WithOne().OnDelete(DeleteBehavior.Cascade);
             });
         }
     }

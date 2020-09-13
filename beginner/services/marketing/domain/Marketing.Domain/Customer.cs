@@ -16,7 +16,7 @@ namespace Marketing.Domain
             Check.NotNullOrWhiteSpace(name, nameof(mobile));
             Name = name;
             Mobile = mobile;
-            Labels = new HashSet<CustomerLabel>();
+            Labels = new List<CustomerLabel>();
         }
 
         public string Name { get; private set; }
@@ -27,7 +27,7 @@ namespace Marketing.Domain
 
         public string Note { get; private set; }
 
-        public HashSet<CustomerLabel> Labels { get; private set; }
+        public List<CustomerLabel> Labels { get; private set; }
 
         public void AddNote(string note)
         {

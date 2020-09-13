@@ -1,12 +1,12 @@
 ﻿using Marketing.Domain;
+using Marketing.Repository.EntityFramework.Mappings;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Marketing.Repository.Entityframework
+namespace Marketing.Repository.EntityFramework.Contexts
 {
+    [ConnectionStringName("Marketing")]
     public class MarketingDbContext : AbpDbContext<MarketingDbContext>, IMarketingDbContext
     {
         public MarketingDbContext(DbContextOptions<MarketingDbContext> options)
@@ -16,10 +16,13 @@ namespace Marketing.Repository.Entityframework
         }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<CustomerLabel> CustomerLabels { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.ConfigCustomerMapping();
+            builder.ConfigCustomerLabelMapping();
         }
     }
 }

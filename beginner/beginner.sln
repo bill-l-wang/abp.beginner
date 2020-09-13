@@ -15,17 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{651180D6-B01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{3B8D3AD9-15F1-4678-8114-C244F60E8193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Domain", "services\marketing\domain\Marketing.Domain\Marketing.Domain.csproj", "{E5C55766-1E24-4594-B82A-022452613A06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Domain", "services\marketing\domain\Marketing.Domain\Marketing.Domain.csproj", "{E5C55766-1E24-4594-B82A-022452613A06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Application", "services\marketing\application\Marketing.Application\Marketing.Application.csproj", "{4E7571A8-3CDF-4851-BEE9-91BD25F6E948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Application", "services\marketing\application\Marketing.Application\Marketing.Application.csproj", "{4E7571A8-3CDF-4851-BEE9-91BD25F6E948}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Repository.Entityframework", "services\marketing\infrastructure\Marketing.Repository.Entityframework\Marketing.Repository.Entityframework.csproj", "{17A14954-1BAE-4B6B-8A32-79FA7521A575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Repository.EntityFramework", "services\marketing\infrastructure\Marketing.Repository.Entityframework\Marketing.Repository.EntityFramework.csproj", "{17A14954-1BAE-4B6B-8A32-79FA7521A575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Application.Contracts", "services\marketing\application\Marketing.Application.Contracts\Marketing.Application.Contracts.csproj", "{96A76FF5-A93B-4D0C-AE3F-66BB67922492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Application.Contracts", "services\marketing\application\Marketing.Application.Contracts\Marketing.Application.Contracts.csproj", "{96A76FF5-A93B-4D0C-AE3F-66BB67922492}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Domain.Shared", "services\marketing\domain\Marketing.Domain.Shared\Marketing.Domain.Shared.csproj", "{DEE6A7AF-1AD5-47A9-A92F-D0490E2A1BDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Domain.Shared", "services\marketing\domain\Marketing.Domain.Shared\Marketing.Domain.Shared.csproj", "{DEE6A7AF-1AD5-47A9-A92F-D0490E2A1BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Application.Query", "services\marketing\application\Marketing.Application.Query\Marketing.Application.Query.csproj", "{BF61CAD9-6A77-4A91-A663-352952962DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Application.Query", "services\marketing\application\Marketing.Application.Query\Marketing.Application.Query.csproj", "{BF61CAD9-6A77-4A91-A663-352952962DE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.Api", "services\marketing\api\Marketing.Api\Marketing.Api.csproj", "{1A836C36-4846-431C-8358-463D71DDCA00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BF61CAD9-6A77-4A91-A663-352952962DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF61CAD9-6A77-4A91-A663-352952962DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF61CAD9-6A77-4A91-A663-352952962DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A836C36-4846-431C-8358-463D71DDCA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A836C36-4846-431C-8358-463D71DDCA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A836C36-4846-431C-8358-463D71DDCA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A836C36-4846-431C-8358-463D71DDCA00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{96A76FF5-A93B-4D0C-AE3F-66BB67922492} = {22FF22DB-A0DC-4981-A888-B3F3F90ED9E8}
 		{DEE6A7AF-1AD5-47A9-A92F-D0490E2A1BDE} = {9CA6D42F-1FA2-4125-A092-4888CC818779}
 		{BF61CAD9-6A77-4A91-A663-352952962DE9} = {22FF22DB-A0DC-4981-A888-B3F3F90ED9E8}
+		{1A836C36-4846-431C-8358-463D71DDCA00} = {651180D6-B010-40A2-BA8C-5C426CB6A969}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DC239BD-D8B5-47F0-8535-6081B7C23544}
