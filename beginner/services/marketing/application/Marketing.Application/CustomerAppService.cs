@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Marketing.Application.Contracts.Services;
 using Marketing.Domain.Factories;
 using Marketing.Domain.Repositories;
@@ -24,7 +25,8 @@ namespace Marketing.Application
 
         public async Task AddCustomer(AddCustomerInput input)
         {
-            var customer = _customerFactory.Create(input.Name, input.Mobile, null);
+            var customer = _customerFactory.Create(input.Name, input.Mobile, input.Labels.ToList());
+
             await _customerRepository.InsertAsync(customer);
         }
 
@@ -35,11 +37,13 @@ namespace Marketing.Application
             if (customer == null)
                 return null;
 
+            //todo use auto mapper
             return new CustomerOutput()
             {
                 Id = customer.Id,
                 Name = customer.Name,
-                Mobile = customer.Mobile
+                Mobile = customer.Mobile,
+                Labels = customer.Labels.Select(c=>c.Name)
             };
         }
     }

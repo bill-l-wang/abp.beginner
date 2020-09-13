@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Marketing.Application.Contracts.OutPuts
 {
@@ -7,5 +8,6 @@ namespace Marketing.Application.Contracts.OutPuts
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Mobile { get; set; }
+        public IEnumerable<string> Labels { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using Marketing.Domain.Shared;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities.Auditing;
 
@@ -35,9 +36,12 @@ namespace Marketing.Domain
             Note = note;
         }
 
-        public void AddLabel(CustomerLabel label)
+        public void AddLabel(string labelName)
         {
-            Labels.AddIfNotContains(label);
+            if (Labels.Any(c => c.Name == labelName))
+                return;
+
+            Labels.AddIfNotContains(new CustomerLabel(Id, labelName));
         }
 
         public void RemoveLabel(CustomerLabel label)

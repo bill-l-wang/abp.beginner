@@ -18,11 +18,9 @@ namespace Marketing.Api.Controllers
             _customerAppService = customerAppService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("id")]
+        public async Task<IActionResult> Get(Guid id)
         {
-            var id = Guid.NewGuid();
-
             var result = await _customerAppService.GetCustomerById(id);
             if (result == null)
                 return NotFound();
@@ -31,13 +29,9 @@ namespace Marketing.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> Add(AddCustomerInput input)
         {
-            await _customerAppService.AddCustomer(new AddCustomerInput()
-            { 
-                Name = "name",
-                Mobile = "123456"
-            });
+            await _customerAppService.AddCustomer(input);
 
             return Ok();
         }

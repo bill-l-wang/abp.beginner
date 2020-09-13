@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Volo.Abp.Application.Dtos;
 
 namespace Marketing.Application.Contracts.Inputs
@@ -7,5 +8,7 @@ namespace Marketing.Application.Contracts.Inputs
     {
         public string Name { get; set; }
         public string Mobile { get; set; }
+
+        public IList<string> Labels { get; set; }
     }
 }

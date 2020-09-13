@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Values;
 
 namespace Marketing.Domain
@@ -21,7 +22,7 @@ namespace Marketing.Domain
 
         protected override IEnumerable<object> GetAtomicValues()
         {
-            yield return Name;
+            yield return CustomerId;
         }
     }
 }

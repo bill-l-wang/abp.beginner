@@ -2,7 +2,6 @@
 using System.Linq;
 using Marketing.Domain.Exceptions;
 using Marketing.Domain.Repositories;
-using Volo.Abp;
 using Volo.Abp.Domain.Services;
 
 namespace Marketing.Domain.Factories
@@ -26,8 +25,10 @@ namespace Marketing.Domain.Factories
             if (labels == null || !labels.Any()) return customer;
 
             foreach (var label in labels)
-                customer.AddLabel(new CustomerLabel(customer.Id, label));
-
+            {
+                customer.AddLabel(label);
+            }
+            
             return customer;
         }
     }
