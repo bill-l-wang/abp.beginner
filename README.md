@@ -1,1 +1,1 @@
-# Try to add a project that based on abp vnext.
+Trying to add a project which based on abp vnext.
